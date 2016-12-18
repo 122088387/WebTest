@@ -1,0 +1,100 @@
+package d;
+
+import java.util.Scanner;
+
+public class IfSwitch_test {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String obj = " ";
+		String obj1 = "百事可乐饮料1瓶";
+		String obj2 = "500ml可乐一瓶";
+		String obj3 = "5公斤面粉";
+		String obj4 = "1个苏泊尔炒菜锅";
+		String obj5 = "欧莱雅爽肤水一瓶";
+		String obj0 = "不换购";
+		System.out.print("请输入消费金额：");
+		double money = input.nextDouble();
+		if (money < 50) {
+			System.out.println("本次消费金额：" + money);
+		} else {
+			System.out.println("是否参加优惠换购活动：");
+			System.out.println("1：满50元，加2元换购" + obj1);
+			System.out.println("2：满100元，加3元换购" + obj2);
+			System.out.println("3：满100元，加10元换购" + obj3);
+			System.out.println("4：满200元，加10元换购" + obj4);
+			System.out.println("5：满200元，加20元换购" + obj5);
+			System.out.println("0：" + obj0);
+			System.out.print("请选择：");
+		}
+
+		int code = input.nextInt();
+		if (money < 50) {
+
+		} else if (money >= 50 & money < 100) {
+			switch (code) {
+			case 1:
+				money += 2;
+				obj = obj1;
+				break;
+			case 0:
+				obj = "无";
+				break;
+			default:
+				System.out.print("重新运行该程序");
+				break;
+			}
+		} else if (money >= 100 & money < 200) {
+			switch (code) {
+			case 1:
+				money += 2;
+				obj = obj1;
+				break;
+			case 2:
+				money += 3;
+				obj = obj2;
+				break;
+			case 3:
+				money += 10;
+				obj = obj3;
+				break;
+			case 0:
+				obj = "无";
+				break;
+			default:
+				System.out.print("重新运行该程序");
+				break;
+			}
+		} else {
+			switch (code) {
+			case 1:
+				money += 2;
+				obj = obj1;
+				break;
+			case 2:
+				money += 3;
+				obj = obj2;
+				break;
+			case 3:
+				money += 10;
+				obj = obj3;
+				break;
+			case 4:
+				money += 10;
+				obj = obj4;
+				break;
+			case 5:
+				money += 20;
+				obj = obj5;
+				break;
+			case 0:
+				obj = "无";
+				break;
+			default:
+				System.out.print("重新运行该程序");
+				break;
+			}
+		}
+		System.out.println("本次消费金额：" + money);
+		System.out.println("成功换购：" + obj);
+	}
+}
