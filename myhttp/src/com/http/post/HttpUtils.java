@@ -12,7 +12,7 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
-//公司测试中。。。
+//公司测试中。。。。
 public class HttpUtils  {
   // 表示服务器端的url
 //  private static String PATH = "http://192.168.56.1:8080/myhttp/LoginAction";
